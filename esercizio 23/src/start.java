@@ -3,29 +3,25 @@ import java.util.Arrays;
 
 public class start {
     public static void main(String[] args) {
-        int [] array= new int [10];
-
-//        System.out.println(calcoloSomma(array));
-//        System.out.println(Arrays.toString((array)));
-        int risultato= calcoloSomma(array);
-        System.out.println(Arrays.toString(array));
-        System.out.println(risultato);
-
+        int [] risultato= riempiArray(new int [10]);
+        int  risultatoSomma= somma(risultato);
+        System.out.println(risultatoSomma);
 
     }
+    public static int [] riempiArray(int [] array) {
 
-    public static int calcoloSomma(int [] a) {
+        for(int i=0;  i<array.length; i++) {
+            array[i] = i + 1;
 
-        int somma = 0;
-        for(int i=0;  i<a.length; i++) {
-            a[i] = i + 1;
-            somma += a[i];  // somma = somma + array[i]
-
-
-
+        }
+        return array;
+    }
+    public  static int somma ( int []array ){
+        int somma=0;
+        for (int i=0; i<array.length; i++){
+            somma = somma + array[i];
         }
         return somma;
     }
-
 }
 
