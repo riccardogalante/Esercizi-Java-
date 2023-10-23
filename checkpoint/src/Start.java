@@ -4,7 +4,7 @@ public class Start {
     public static void main(String[] args) {
         int[] array={3,5,8,9,6};
         String[] arrayStr={"calcio","tennis","pingpong"};
-        String lunghezza= "tennis";
+
         System.out.println(maxValue(array));
         System.out.println(minValue(array));
         System.out.println(sommaInt(array));
