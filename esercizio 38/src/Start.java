@@ -1,14 +1,15 @@
 public class Start {
     public static void main(String[] args) {
-        int num=2;
+        int num=9;
+        int min =10;
+        int max =20;
 
-        System.out.println(rangeVerifica(num));
+        System.out.println(rangeVerifica(num, min, max));
 
     }
-    public static boolean rangeVerifica(int number){
-        int min =1;
-        int max =20;
-        if (number < min || number > max){
+    public static boolean rangeVerifica(int number,int min,int max){
+
+        if (number< max && number>min){
             return true;
         } else {
             throw new RuntimeException("il numero non è compreso");
