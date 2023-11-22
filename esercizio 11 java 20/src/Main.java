@@ -7,7 +7,7 @@ public class Main {
         System.out.println("i due numeri sono diversi: " + verificaNumero(primoNum,secondNum));
     }
     public static boolean verificaNumero(int num1, int num2){
-        boolean verifica= num1==num2;
+        boolean verifica= num1!=num2;
         return verifica;
     }
 }
