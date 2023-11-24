@@ -1,8 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         int giornoDellaSettimana = 4;
+        stampaGiornoSettimana(giornoDellaSettimana);
 
-        switch (giornoDellaSettimana) {
+
+    }
+    public static void stampaGiornoSettimana(int giorni){
+        switch (giorni) {
             case 1:
                 System.out.println("Lunedì");
                 break;
