@@ -5,20 +5,20 @@ import java.util.Locale;
 public class Main {
     public static void main(String[] args) {
         // Creazione di un oggetto OffsetDateTime dalla stringa
-        OffsetDateTime data = OffsetDateTime.parse("2002-03-01T13:00:00Z");
+        OffsetDateTime date = OffsetDateTime.parse("2002-03-01T13:00:00Z");
 
         // Formattazione della data nelle varie versioni
-        DateTimeFormatter formatoCompleto = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy HH:mm", Locale.ITALIAN);
-        DateTimeFormatter formatoMedio = DateTimeFormatter.ofPattern("d MMM yyyy HH:mm", Locale.ITALIAN);
-        DateTimeFormatter formatoBreve = DateTimeFormatter.ofPattern("dd/MM/yy HH:mm", Locale.ITALIAN);
+        DateTimeFormatter fullFormatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy h:mm a", Locale.ENGLISH);
+        DateTimeFormatter mediumFormatter = DateTimeFormatter.ofPattern("MMM d, yyyy h:mm a", Locale.ENGLISH);
+        DateTimeFormatter shortFormatter = DateTimeFormatter.ofPattern("M/d/yy h:mm a", Locale.ENGLISH);
 
-        String dataFormatoCompleto = data.format(formatoCompleto);
-        String dataFormatoMedio = data.format(formatoMedio);
-        String dataFormatoBreve = data.format(formatoBreve);
+        String fullFormattedDate = date.format(fullFormatter);
+        String mediumFormattedDate = date.format(mediumFormatter);
+        String shortFormattedDate = date.format(shortFormatter);
 
         // Stampa delle varie versioni
-        System.out.println("Formato Completo: " + dataFormatoCompleto);
-        System.out.println("Formato Medio: " + dataFormatoMedio);
-        System.out.println("Formato Breve: " + dataFormatoBreve);
+        System.out.println("Full Format: " + fullFormattedDate);
+        System.out.println("Medium Format: " + mediumFormattedDate);
+        System.out.println("Short Format: " + shortFormattedDate);
     }
 }
